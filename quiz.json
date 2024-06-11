@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Address to Claim $Swords</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Submit Address to Claim $Swords</h2>
+    <p>Please follow <a href="https://warpcast.com/ayamberenang79" target="_blank">this link</a> before submitting your EVM address.</p>
+    <input type="checkbox" id="followCheckbox" onclick="toggleAddressInput()"> I have followed the link
+    <form id="addressForm" class="hidden">
+        <label for="evmAddress">EVM Address:</label><br>
+        <input type="text" id="evmAddress" name="evmAddress" required><br><br>
+        <input type="submit" class="btn" value="Submit">
+    </form>
+</div>
+
+<script>
+    function toggleAddressInput() {
+        var checkbox = document.getElementById('followCheckbox');
+        var form = document.getElementById('addressForm');
+        if (checkbox.checked) {
+            form.classList.remove('hidden');
+        } else {
+            form.classList.add('hidden');
+        }
+    }
+</script>
+
+</body>
+</html>
